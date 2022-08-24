@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% for item in object_list %}
+    <!--object_listにはDBにあるBookで作成したデータが入っています。-->
+    <ul>
+      <li>id : {{ item.reservation_id }}</li>
+      <li>日付：{{ item.reservation_date }}</li>
+      <li>時間：{{ item.reservation_time }}</li>
+      <li>検査名：{{ item.modality }}</li>
+    </ul>
+    {% endfor %}
+  </body>
+</html>
